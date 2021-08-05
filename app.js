@@ -139,3 +139,58 @@ function getTodos() {
     todoList.appendChild(todoDiv);
   });
 }
+
+/* THEMES */
+
+const tema1 = document.querySelector(".circulo1");
+const tema2 = document.querySelector(".circulo2");
+const tema3 = document.querySelector(".circulo3");
+const tema4 = document.querySelector(".circulo4");
+const html = document.querySelector("html");
+
+tema1.addEventListener("click", cambiartema1);
+tema2.addEventListener("click", cambiartema2);
+tema3.addEventListener("click", cambiartema3);
+tema4.addEventListener("click", cambiartema4);
+
+function cambiartema1() {
+  tema1.classList.add("active");
+  tema2.classList.remove("active");
+  tema3.classList.remove("active");
+  tema4.classList.remove("active");
+  html.classList.add("tema1");
+  html.classList.remove("tema2");
+  html.classList.remove("tema3");
+  html.classList.remove("tema4");
+}
+function cambiartema2() {
+  tema2.classList.add("active");
+  tema1.classList.remove("active");
+  tema3.classList.remove("active");
+  tema4.classList.remove("active");
+  html.classList.add("tema2");
+  html.classList.remove("tema1");
+  html.classList.remove("tema3");
+  html.classList.remove("tema4");
+}
+function cambiartema3() {
+  tema3.classList.add("active");
+  tema1.classList.remove("active");
+  tema2.classList.remove("active");
+  tema4.classList.remove("active");
+  html.classList.add("tema3");
+  html.classList.remove("tema2");
+  html.classList.remove("tema1");
+  html.classList.remove("tema4");
+}
+function cambiartema4() {
+  tema4.classList.add("active");
+  tema1.classList.remove("active");
+  tema2.classList.remove("active");
+  tema3.classList.remove("active");
+  html.classList.add("tema4");
+  html.classList.remove("tema2");
+  html.classList.remove("tema3");
+  html.classList.remove("tema1");
+}
+

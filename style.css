@@ -6,15 +6,44 @@
 body {
   color: white;
   font-family: "Poppins", sans-serif;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
-html {
+
+.tema1{
   background-repeat: repeat-x;
 	background-size: cover;
 	background: linear-gradient(-45deg, #DDE0DA, rgb(211, 182, 55), #c04e89, #000000) ;
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+}
+
+.tema2{
+  background-repeat: repeat-x;
+	background-size: cover;
+	background: linear-gradient(-45deg, #DDE0DA, rgb(107 204 255), #c04e89, #000000) ;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+}
+
+.tema3{
+  background-repeat: repeat-x;
+	background-size: cover;
+	background: linear-gradient(-45deg, #DDE0DA, rgb(11 28 124), #b695ff, #000000) ;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+}
+
+.tema4{
+  background-repeat: repeat-x;
+	background-size: cover;
+	background: linear-gradient(-45deg, #DDE0DA, rgb(218 45 45), #53d590, #000000) ;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
 }
 
 html::-webkit-scrollbar {
@@ -69,6 +98,7 @@ p {
 
 h1 {
   text-align: center;
+  padding-top: 2rem;
 }
 
 header,
@@ -319,4 +349,66 @@ footer p {
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.tema{
+  display: flex;
+  margin-top: 1.5rem;
+
+}
+
+.circulo1{
+  height:2rem;
+  width:2rem;
+  background: linear-gradient(-45deg, rgb(211, 182, 55), #c04e89) ;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius:50px;
+  margin-left: 1rem;
+  border: rgb(255, 255, 255) 3px solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.circulo2{
+  height:2rem;
+  width:2rem;
+  background: linear-gradient(-45deg, rgb(107 204 255), #c04e89) ;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius:50px;
+  margin-left: 1rem;
+  border: rgb(255, 255, 255) 3px solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.circulo3{
+  height:2rem;
+  width:2rem;
+  background: linear-gradient(-45deg, rgb(11 28 124), #b695ff) ;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius:50px;
+  margin-left: 1rem;
+  border: rgb(255, 255, 255) 3px solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.circulo4{
+  height:2rem;
+  width:2rem;
+  background: linear-gradient(-45deg, rgb(218 45 45), #53d590) ;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius:50px;
+  margin-left: 1rem;
+  border: rgb(255, 255, 255) 3px solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.active {
+  border: #53d590 3px solid;
 }
