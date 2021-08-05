@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+html {
+  background-repeat: repeat-x;
+	background-size: cover;
+	background: linear-gradient(-45deg, #DDE0DA, rgb(211, 182, 55), #c04e89, #000000) ;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+::selection{
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 40% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 40% 50%;
+  }
+}
+
+
+header {
+  font-size: 2rem;
+  flex-direction: column;
+}
+
+#footer {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+a:hover {
+  color: rgb(63, 63, 63);
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+header,
+.addtodo {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addtodo{
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.addtodo input {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 15px 0px 0px 15px;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-right: none;
+  color: white;
+  width: 100%;
+
+}
+
+.addtodo input:focus {
+  outline: none;
+}
+
+.addtodo button {
+  color: white;
+  padding: 0.5rem;
+  font-size: 2rem;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-left: none;
+  border-radius: 0px 15px 15px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 3px !important;
+}
+.addtodo button:hover {
+  color: rgb(0, 0, 0);
+  
+}
+
+.addtodo button i {
+  font-size: 20px;
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*responsive media query*/
+@media screen and (max-width: 600px) {
+  .todo-container2 {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 1.3em;
+  }
+}
+
+.todo-list {
+  width: 95%;
+  max-width: 800px;
+  list-style: none;
+}
+
+.todo {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 15px;
+}
+.filter-todo {
+  padding: 1rem;
+  border-radius: 15px 15px 0px 0px;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: white;
+}
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: none;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.trash-btn:hover {
+  color: rgb(255, 72, 72);
+}
+.complete-btn:hover {
+  color: rgb(104, 255, 129);
+}
+
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+  transition: all 0.3s ease;
+}
+
+
+/* Custom Select */
+.select {
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+}
+
+select option {
+  background:  rgb(255, 255, 255);
+  color: #000;
+  border-radius: 15px;
+}
+
+/* Arrow */
+.select::after {
+  color: white;
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: auto;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  pointer-events: none;
+  border-radius: 0px 15px 0px 0px;
+  transition: all 0.3s ease;
+}
+/* Transition */
+
+.select:hover::after, select:hover {
+  color: rgb(0, 0, 0);
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+}

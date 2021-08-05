@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lista de Tareas</h1>
+      <p id="footer">Administrá tu tiempo y alcanzá todos tus objetivos.</p>
+    </header>
+    <form class="addtodo">
+      <div class="todo-container2">
+      <input type="text" class="todo-input" />
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus"></i>
+      </button>
+      </div>
+      <div class="select todo-container">
+        <select name="todos" class="filter-todo">
+          <option value="all">Todas</option>
+          <option value="completed">Completadas</option>
+          <option value="uncompleted">Sin completar</option>
+        </select>
+      </div>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+
+    <footer>
+      <p>&#169; 2021 Made by <a href="https://ignacioprados.vercel.app" target="_blank">IgnacioPrados</a></p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
