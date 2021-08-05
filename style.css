@@ -17,6 +17,14 @@ html {
     animation: gradient 15s ease infinite;
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(19, 19, 19);
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgb(92, 92, 92);
+  border-radius: 10px;
+}
 ::selection{
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -52,7 +60,7 @@ a {
 }
 
 a:hover {
-  color: rgb(63, 63, 63);
+  color: rgb(0, 0, 0);
 }
 
 p {
@@ -126,6 +134,13 @@ header,
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
+}
+
+.todo-container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .todo-container2 {
@@ -153,10 +168,18 @@ header,
   }
 }
 
+@media screen and (max-width: 327px) {
+  .todo-container {
+    margin-bottom: 6.5rem;
+  }
+}
+
+
 .todo-list {
   width: 95%;
   max-width: 800px;
   list-style: none;
+  margin-bottom: 1.8rem;
 }
 
 .todo {
@@ -215,7 +238,7 @@ header,
 }
 
 .fall {
-  transform: translateY(10rem) rotateZ(20deg);
+  transform: translateY(10rem) scale(.9);
   opacity: 0;
 }
 
@@ -278,6 +301,22 @@ select option {
 }
 
 footer {
-  margin-top: 2rem;
   text-align: center;
+}
+
+footer p {
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+  width: 95%;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
